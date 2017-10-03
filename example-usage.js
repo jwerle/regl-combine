@@ -1,8 +1,7 @@
-'use strict'
-const trampoline = require('./')
-const regl = trampoline.wrap(require('regl')())
+const { combine, wrap } = require('./')
+const regl = wrap(require('regl')()) // required
 
-const drawTriangle = trampoline.compose(regl, [
+const drawTriangle = combine(regl, [
   regl({
     frag: `
       precision mediump float;
@@ -43,8 +42,6 @@ const drawTriangle = trampoline.compose(regl, [
     count: 3
 	})
 ])
-
-console.log(drawTriangle);
 
 regl.frame(({time}) => {
   drawTriangle({

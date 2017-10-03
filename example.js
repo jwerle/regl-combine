@@ -1,5 +1,5 @@
 'use strict'
-const { compose, wrap } = require('./')
+const { combine, wrap } = require('./')
 const bunny = require('bunny')
 const regl = wrap(require('regl')())
 const mat4 = require('gl-mat4')
@@ -60,7 +60,7 @@ const frag = regl({
 
 const draw = regl({})
 
-const commands = compose(regl,
+const commands = combine(regl,
   [
     projection,
     view,

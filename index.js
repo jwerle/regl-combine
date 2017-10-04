@@ -129,8 +129,7 @@ function combine(regl, ...commands) {
 
     function generate(index) {
       if (index >= commands.length) {
-        concat()
-        return trampa.wrap(null)
+        return trampa.wrap(concat())
       } else {
         return trampa.lazy(step)
       }
@@ -162,10 +161,10 @@ function combine(regl, ...commands) {
     return klen && groups.push(createCommand(kopts))
   }
 
-  function copy(ctx) {
+  function copy(command) {
     return Object.assign(
       currentReglOpts,
-      extend.command(currentReglOpts, ctx[kReglOptions] || ctx))
+      extend.command(currentReglOpts, command[kReglOptions] || command))
   }
 }
 

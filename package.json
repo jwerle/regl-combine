@@ -1,6 +1,6 @@
 {
   "name": "regl-combine",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Combine hundreds or thousands of regl commands without worrying about \"too much recursion\" or \"maximum call stack size exceeded\" errors.",
   "main": "index.js",
   "dependencies": {

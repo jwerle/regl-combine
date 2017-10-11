@@ -4,9 +4,9 @@
   "description": "Combine hundreds or thousands of regl commands without worrying about \"too much recursion\" or \"maximum call stack size exceeded\" errors.",
   "main": "index.js",
   "dependencies": {
-    "regl-extend": "^1.0.2",
-    "regl-shared-context": "^1.0.0",
-    "trampa": "^1.0.0"
+    "regl-extend": "^1.0.x",
+    "regl-shared-context": "^1.0.x",
+    "trampa": "^1.0.x"
   },
   "devDependencies": {
     "bunny": "^1.0.1",

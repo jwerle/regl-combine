@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "regl-extend": "^1.0.2",
+    "regl-shared-context": "^1.0.0",
     "trampa": "^1.0.0"
   },
   "devDependencies": {

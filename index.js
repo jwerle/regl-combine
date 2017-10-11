@@ -1,4 +1,5 @@
 'use strict'
+const shared = require('regl-shared-context')
 const extend = require('regl-extend')
 const trampa = require('trampa')
 const assert = require('assert')
@@ -157,6 +158,9 @@ function combine(regl, ...commands) {
       void klen ++
       kopts[k] = currentReglOpts[k]
       delete currentReglOpts[k]
+    }
+    if (kopts.context && 'object' == typeof kopts.context) {
+      kopts.context = shared.context(kopts.context)
     }
     return klen && groups.push(createCommand(kopts))
   }
